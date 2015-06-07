@@ -1,0 +1,123 @@
+.nav-box {
+	position: relative;
+	color: #5b6677;
+}
+.nav-container {
+	height: 42px;
+	background-color: #f7f8fa;
+	border-bottom: 1px solid #d2d7df;
+}
+.nav-inner {
+	position: relative;
+	margin-left: 5px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.nav-list {
+	position: relative;
+	display: -webkit-box;
+	-webkit-box-lines: multiple;
+}
+.nav-btn,
+.nav-left-shadow,
+.nav-right-shadow {
+	background-image: url('/static/bdnews/bdnews/page/index/img/bg-nav.png');
+	background-repeat: no-repeat;
+	background-size: 20px 61px;
+}
+.nav-btn {
+	float: right;
+	width: 36px;
+	height: 42px;
+	background-position: center -35px;
+	-webkit-transform: rotateZ(0deg);
+	z-index: 8;
+}
+.nav-left-shadow,
+.nav-right-shadow {
+	position: absolute;
+	top: 0;
+	display: none;
+	width: 8px;
+	height: 42px;
+	background-position: 0px 4px;
+}
+.nav-left-shadow {
+	left: 0;
+	-webkit-transform: rotateZ(0deg);
+}
+.nav-right-shadow {
+	right: 0;
+	-webkit-transform: rotateZ(180deg);
+}
+.nav-current {
+	display: none;
+	position: absolute;
+	top: 39px;
+	left: 0px;
+	width: 46px;
+	height: 3px;
+	background-color: #2786fb;
+	-webkit-transform: translateX(5px);
+}
+.nav-item {
+	height: 42px;
+	margin: 0 3px;
+	padding: 0 5px;
+	line-height: 42px;
+	font-size: 16px;
+}
+.nav-item-focus {
+	color: #2786fb
+}
+
+.nav-subscribe {
+	display: none;
+}
+.nav-subscribe-config {
+	position: relative;
+	width: 200px;
+	height: 42px;
+}
+.nav-subscribe-group {
+	position: absolute;
+	left: 7px;
+	top: 7px;
+	border: 1px solid #d2d8e5;
+	line-height: 27px;
+	font-size: 15px;
+}
+.nav-subscribe-group > div {
+	display: inline-block;
+	padding: 0 5px;
+}
+.nav-subscribe-add {
+	border-right: 1px solid #d2d8e5;
+}
+.nav-subscribe-inner {
+	z-index: -1;
+}
+.nav-subscribe-list {
+	border-top: 1px solid #d2d7df;
+	background-color: #fafafa;
+	overflow: hidden;
+}
+.nav-subscribe-item {
+	float: left;
+	display: inline;
+	width: 22%;
+	height: 31px;
+	margin-left: 2.4%;
+	margin-top: 7px;
+	background-color: #ECEFF4;
+	color: #30343A;
+	line-height: 31px;
+	font-size: 15px;
+	text-align: center;
+	overflow: hidden;
+}
+.nav-overlay {
+	display: none;
+	height: 500px;
+	background: rgba(0,0,0,0.2);
+}

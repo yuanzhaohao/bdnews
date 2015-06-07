@@ -1,0 +1,19 @@
+<script type="text/template" id="template_image_slide">
+<div class="image-slide-list">
+<% _.each(list, function(item, index) { %>
+	<li class="image-slide-item"></li>
+<% }); %>
+</div>
+</script>
+
+<script type="text/template" id="template_image_thumb">
+<header class="ui-header image-thumb-header">
+	<h2 class="ui-header-title">
+		<div class="image-nums image-nums-thumb">
+			<span class="image-icon image-icon-thumb"><%- len %></span>
+		</div>
+	</h2>
+</header>
+<ul class="image-thumb-list">
+</ul>
+</script>

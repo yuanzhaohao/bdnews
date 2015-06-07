@@ -1,0 +1,82 @@
+#search_view {
+	display: none;
+}
+#search_view_header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9;
+}
+#search_view_content {
+	position: relative;
+	min-height: 420px;
+	padding-top: 90px;
+}
+
+.search-hotwords-wrapper {
+	padding-top: 10px;
+}
+.search-hotwords-title {
+	width: 60px;
+	height: 26px;
+	margin: 0 auto;
+	padding-top: 5px;
+	padding-left: 16px;
+	background-image: url('/static/bdnews/bdnews/page/search/img/bg-hotwords-title.png');
+	background-size: 16px 22px;
+	background-repeat: no-repeat;
+	background-position: 0px 7px;
+	line-height: 26px;
+	font-size: 16px;
+	text-align: center;
+	color: #626262;
+}
+
+.search-hotwords-list {
+	text-align: center;
+}
+.search-hotwords-item {
+	display: inline-block;
+	height: 34px;
+	margin: 6px 4px;
+	padding: 0 9px;
+	border-radius: 2px;
+	font-size: 14px;
+	line-height: 34px;
+	color: #fff;
+}
+
+.search-hotwords-item:nth-child(0){
+	background-color: #F289A2;
+}
+.search-hotwords-item:nth-child(1) {
+	background-color: #8CBDDC;
+}
+.search-hotwords-item:nth-child(2) {
+	background-color: #B4B953;
+}
+.search-hotwords-item:nth-child(3) {
+	background-color: #E3B342;
+}
+.search-hotwords-item:nth-child(4) {
+	background-color: #5BABEB;
+}
+.search-hotwords-item:nth-child(5) {
+	background-color: #F1914F;
+}
+.search-hotwords-item:nth-child(6) {
+	background-color: #9E8CCB;
+}
+.search-hotwords-item:nth-child(7) {
+	background-color: #79C5CE;
+}
+.search-hotwords-item:nth-child(8) {
+	background-color: #C4AB6F;
+}
+.search-hotwords-item:nth-child(9) {
+	background-color: #F36A62;
+}
+.search-hotwords-item:nth-child(10) {
+	background-color: #E193BD;
+}

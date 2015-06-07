@@ -1,0 +1,39 @@
+<script type="text/template" id="template_video_nav">
+<div class="nav-container">
+	<div class="nav-btn"></div>
+	<div class="nav-inner">
+		<div class="nav-list">
+			<div class="nav-item">精选</div>
+			<% _.each(tags, function (item, index) { %>
+				<div class="nav-item" data-type="<%- item.type %>"><%- item.name %></div>
+			<% }); %>
+			<div class="nav-current"></div>
+		</div>
+		<div class="nav-left-shadow"></div>
+		<div class="nav-right-shadow"></div>
+	</div>
+	<div class="nav-subscribe">
+		<div class="nav-subscribe-config">
+			<div class="nav-subscribe-group">
+				<div class="nav-subscribe-manage">管理栏目</div>
+			</div>
+		</div>
+		<div class="nav-subscribe-list clearfix">
+			<div class="nav-subscribe-item" data-index="0">精选</div>
+			<% 
+			var i = 0;
+			_.each(tags, function (item, index) { 
+				i++;
+			%>
+				<div class="nav-subscribe-item" 
+					data-type="<%- item.type %>" 
+					data-index="<%= i %>"
+					>
+					<%- item.name %>
+				</div>
+			<% }); %>
+		</div>
+		<div class="nav-overlay"></div>
+	</div>
+</div>
+</script>

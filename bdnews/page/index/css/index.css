@@ -1,0 +1,20 @@
+#index_view {
+	display: none;
+}
+
+#index_view_header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9;
+}
+#index_view_content {
+	position: relative;
+	min-height: 420px;
+	padding-top: 88px;
+}
+
+@import url('./index_carousel.css?__inline')
+@import url('./index_weather.css?__inline')
+@import url('./index_nav.css?__inline')

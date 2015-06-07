@@ -1,0 +1,190 @@
+/*.ui-header-container {
+    min-width: 320px;
+    max-width: 400px;
+}*/
+
+.ui-header {
+    position: relative;
+    height: 45px;
+    background-color: #2786fb;
+}
+.ui-header-logo {
+    height: inherit;
+    background-image: url('/gmu/GMU-ui/img/logo2.png');
+    background-position: center;
+    background-size: 73px 25px;
+    background-repeat: no-repeat;
+}
+.ui-header-title {
+    display: inline-block;
+    width: 100%;
+    line-height: 45px;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+}
+.ui-header-listslide,
+.ui-header-search {
+    position: absolute;
+    top: 0px;
+    width: 45px;
+    height: 45px;
+    background-image: url('/gmu/GMU-ui/img/bg-header-index.png');
+    background-repeat: no-repeat;
+}
+.ui-header-listslide {
+    left: 0px;
+    background-size: 23px 60px;
+    background-position: center 15px;
+}
+.ui-header-search {
+    right: 0;
+    background-size: 22px 53px;
+    background-position: center -19px;
+}
+/*#index_view_header .ui-header-search {
+    right: 45px;
+}*/
+.ui-config-list {
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background-color: #3f95ff;
+    border-width: 1px;
+    border-style: none none solid solid;
+    border-color: #1176f2;
+    border-radius: 0 0 0 3px;
+}
+.ui-header-backbtn,
+.ui-header-config,
+.ui-config-item {
+    width: 45px;
+    height: 45px;
+    background-image: url('/gmu/GMU-ui/img/bg-header-config.png');
+    background-size: 27px 288px;
+    background-repeat: no-repeat;
+}
+.ui-header-backbtn,
+.ui-header-config,
+.ui-config-r {
+    position: absolute;
+    top: 0;
+}
+.ui-header-backbtn {
+    background-position: center 12px;
+    left: 0;
+}
+.ui-config-r {
+    right: 0;
+}
+.ui-header-config {
+    border-left: 1px solid #1176f2;
+    background-position: center -21px;
+    right: 0;
+    z-index: 9;
+}
+.ui-config-item-write {
+    background-position: center -53px;
+}
+.ui-config-item-share {
+    background-position: center -94px;
+}
+.ui-config-item-comment {
+    background-position: center -136px;
+}
+.ui-config-item-collect {
+    background-position: center -176px;
+}
+.ui-config-item-collected {
+    background-position: center -217px;
+}
+.ui-config-item-origin {
+    background-position: center -257px;
+}
+.ui-config-pressed {
+    background-color: #3f95ff;
+}
+
+.ui-config-font {
+    position: relative;
+    height: 35px;
+    background-color: #f7f8fa;
+    border-bottom: 1px solid #d2d7df;
+}
+.ui-config-small,
+.ui-config-big {
+    position: absolute;
+    top: 0;
+    width: 45px;
+    height: 100%;
+    background-image: url('/gmu/GMU-ui/img/bg-config-typeface.png');
+    background-size: 22px 57px;
+    background-repeat: no-repeat;
+}
+.ui-config-small {
+    right: 45px;
+    background-position: center 9px;
+}
+.ui-config-big {
+    right: 0px;
+    background-position: center -32px;
+}
+
+.ui-header-configbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 46px;
+    height: 45px;
+    z-index: 9;
+}
+
+.ui-header-searchbox {
+    position: relative;
+    padding: 5px 0;
+    background-color: #eee;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.ui-header-searchbox .ui-search-box {
+    margin: 0 5px;
+    border: 1px solid #8d8d8d;
+}
+
+/*#image_view .ui-header-container {
+    position: absolute;
+}*/
+#image_view .ui-header {
+    background-color: #222;
+    opacity: .8;
+    z-index: 10;
+}
+#image_view .ui-config-list {
+    background-color: #333;
+    border-color: #111;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.75);
+}
+#image_view .ui-header-config {
+    border-left: 1px solid #111;
+}
+#image_view .ui-config-pressed {
+    background-color: #333;
+}
+
+.ui-config-btn {
+    font-size: 14px;
+    height: 30px;
+    min-width: 18px;
+    line-height: 30px;
+    background-color: #3f95ff;
+    border: 1px solid #1176f2;
+    padding: 0 8px;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.ui-config-r .ui-config-btn {
+    float: right;
+    margin: 7px 5px 4px 0;
+}

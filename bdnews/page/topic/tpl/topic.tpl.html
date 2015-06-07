@@ -1,0 +1,89 @@
+<script type="text/template" id="template_topic_subpage">
+<div class="topic-page" 
+	data-type="<%- head.type %>"
+	data-nid="<%- head.nid %>">
+	<% if (head.imageurls instanceof Array && head.imageurls.length > 0) { %>
+		<div class="topic-page-image">
+			<img class="topic-lazyload" data-url="<%- head.imageurls[0].url %>">
+		</div>
+	<% } %>
+	<h3 class="topic-page-title"><%- head.title %></h3>
+	<div class="topic-page-abs"><%- head.abs %></div>
+</div>
+<% _.each(column, function(item, index) { %>
+	<% if (item.news instanceof Array && item.news.length > 0) { %>
+	 	<div class="page-title"><%- item.name %></div>
+	<% } %>
+
+	<% if (item.type === 'z_text') { %>
+		<div class="topic-text-list">
+			<% _.each(item.news, function(v, k) { %>
+			<div class="topic-text-item" 
+				data-type="<%- v.type %>"
+				data-nid="<%- v.nid %>">
+				<h4 class="topic-text-title"><%- v.title %></h4>
+				<div class="topic-text-tips">
+					<%- bdnews.helper.getFormatedDate(v.ts) %>
+					<% if (v.imageurls instanceof Array && v.imageurls.length > 0) {%>
+						<span class="topic-text-image"></span>
+					<% } %>
+				</div>
+			</div>
+			<% }); %>
+		</div>
+	<% } %>
+
+	<% if (item.type === 'z_textpic') { %>
+		<div class="topic-textpic-list">
+			<% _.each(item.news, function(v, k) { %>
+				<div class="ui-news-item" 
+					data-nid="<%- v.nid %>"
+					data-type="<%- v.type %>"
+				>
+				<div class="ui-news-main">
+					<% if (v.imageurls instanceof Array && v.imageurls.length > 0) { %>
+					<div class="ui-news-image">
+						<img class="topic-lazyload" data-url="<%- v.imageurls[0].url %>" />
+					</div>
+					<% } %>
+					<div class="ui-news-text">
+						<h2 class="ui-news-title"><%- v.title %></h2>
+						<p class="ui-news-abs">
+							<%- v.abs %>
+							<span class="ui-news-time">
+								<%- bdnews.helper.getFormatedDate(v.ts) %>
+							</span>
+						</p>
+					</div>
+				</div>
+				</p>
+			</div>
+			<% }); %>
+		</div>
+	<% } %>
+
+	<% if (item.type === 'z_pic' || item.type === 'z_video') { %>
+		<div class="topic-gallery">
+			<div class="topic-gallery-list">
+				<% _.each(item.news, function(v, k) { %>
+					<div class="topic-gallery-item" 
+						data-type="<%- v.type %>"
+						data-nid="<%- v.nid %>">
+						<div class="topic-gallery-content">
+							<div class="topic-gallery-image">
+								<% if (item.type === 'z_video') { %>
+									<div class="topic-gallery-video"></div>
+								<% } %>
+								<img class="topic-lazyload" data-url="<%- v.imageurls[0].url %>">
+							</div>
+							<h4 class="topic-gallery-title"><%- v.title %></h4>
+						</div>
+						<div class="topic-gallery-shadow"></div>
+					</div>
+				<% }); %>
+			</div>
+			<div class="topic-gallery-icons"></div>
+		</div>
+	<% } %>
+<% }); %>
+</script>

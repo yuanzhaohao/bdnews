@@ -1,0 +1,61 @@
+#img_view{
+	display: none;
+	position: relative;
+}
+#img_view_header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9;
+}
+#img_view_content {
+	position: relative;
+	min-height: 420px;
+	padding-top: 45px;
+}
+
+.img-list {
+	width: 320px;
+	margin: 0 auto;
+	margin-top: 7px;
+}
+.img-list > div {
+	margin-left: 5px;
+}
+.img-item {
+	position: relative;
+	display: inline;
+	float: left;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	border-radius: 5px;
+	background-color: #f4f7f9;
+	background-image: url('/gmu/GMU-ui/img/bg-news-placeholder.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 80px 60px;
+	overflow: hidden;
+}
+.img-item img {
+	width: 100%;
+	height: auto;
+}
+.img-item h2 {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	color: #fff;
+	height: 63px;
+	width: 140px;
+	font-size: 14px;
+	line-height: 100px;
+	text-align: left;
+	background-image: url('/static/bdnews/bdnews/page/img/img/bg-menu.png');
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	background-size: 84px 63px;
+	font-weight: normal;
+	padding-left: 5px;
+	border-bottom-left-radius: 5px;
+}

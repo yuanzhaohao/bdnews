@@ -1,0 +1,85 @@
+<!--inline["video_nav.tpl.html"]-->
+<!--inline["video_carousel.tpl.html"]-->
+
+<script type="text/template" id="template_video_subpage_index">
+<% _.each(list, function (item, index) { %>
+	<div class="page-title">
+		<i class="video-menu video-menu-<%- item.type %>"><%- item.name %></i>
+		<a data-url="#video/<%- item.type %>" class="video-more">更多》</a>
+	</div>
+	<div class="video-list clearfix">
+		<% 
+		var data = item.data,
+			len = data.length;
+		_.each(data, function (v, k) { 
+		%>
+			<% if (k === 0) { %>
+				<div class="video-item video-first-item">
+					<img class="img-lazyload" data-url="<%- v.imgv_url %>" />
+					<div class="video-cell">
+						<div class="video-title"><%- v.title %></div>
+						<%- v.update %>
+					</div>
+				</div>
+			<% } else { %>
+				<% if (len % 2 === 0 && k <= len - 2) { %>
+					<div class="video-item">
+						<img class="img-lazyload" data-url="<%- v.imgh_url || v.imgv_url %>" />
+						<div class="video-cell">
+							<div class="video-title"><%- v.title %></div>
+							<%- v.update %>
+						</div>
+					</div>
+				<% } %>
+				<% if (len % 2 !== 0) { %>
+					<div class="video-item">
+						<img class="img-lazyload" data-url="<%- v.imgh_url || v.imgv_url %>" />
+						<div class="video-cell">
+							<div class="video-title"><%- v.title %></div>
+							<%- v.update %>
+						</div>
+					</div>
+				<% } %>
+			<% } %>
+		<% }); %>
+	</div>
+<% }); %>
+</script>
+
+<script type="text/template" id="template_video_channel_list">
+<div class="video-channel-list">
+	<% _.each(list, function (item, index) { %>
+		<div class="video-channel-item">
+			<img class="img-lazyload" data-url="<%- item.img_url %>" />
+			<div class="video-cell">
+				<div class="video-title"><%- item.title %></div>
+				<% if (!!item.update) { %>
+					<%= item.update %>
+				<% } %>
+			</div>
+		</div>
+	<% }); %>
+</div>
+</script>
+
+<script type="text/template" id="template_video_channel_needs">
+<div class="video-list clearfix">
+	<% _.each(list, function (item, index) { %>
+		<div class="video-app">
+			<div class="video-app-image">
+				<img class="img-lazyload" 
+					data-url="<%- item.img_url || item.imgh_url || item.imgv_url %>" />
+				<div class="video-cell">
+					<div class="video-title"><%- item.title %></div>
+				</div>
+			</div>
+			<% if (type !== 'live') { %>
+				<div class="video-app-config">
+					<div class="video-app-play"></div>
+					<div class="video-app-download"></div>
+				</div>
+			<% } %>
+		</div>
+	<% }); %>
+</div>
+</script>

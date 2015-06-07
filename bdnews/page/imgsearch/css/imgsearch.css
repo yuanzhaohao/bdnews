@@ -1,0 +1,62 @@
+#imgsearch_view {
+	display: none;
+}
+#imgsearch_view_header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9;
+}
+#imgsearch_view_content {
+	position: relative;
+	min-height: 420px;
+	padding-top: 90px;
+}
+
+.imgsearch-list {
+	width: 320px;
+	margin: 0 auto;
+	min-height: 300px;
+	margin-top: 3px;
+	padding-bottom: 3px;
+}
+.imgsearch-item {
+	float: left;
+	display: inline;
+	margin-left: 3px;
+	margin-top: 3px;
+	background-color: #f4f7f9;
+	background-image: url('/gmu/GMU-ui/img/bg-news-placeholder.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 80px 60px;
+	overflow: hidden;
+}
+.imgsearch-item img {
+	width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+.imgsearch-query > ul {
+	margin-top: 7px;
+	margin-bottom: 7px;
+	border-bottom: 1px solid #ccc;
+	background-color: #eef0f2;
+}
+
+.imgsearch-query-item {
+	float: left;
+	color: #525761;
+	line-height: 36px;
+	height: 36px;
+	width: 50%;
+	padding-left: 10px;
+	border-top: 1px solid #ccc;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.imgsearch-query-item:nth-child(2n) {
+	border-left: 1px solid #ccc;
+}

@@ -1,0 +1,106 @@
+#image_view {
+	display: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: #161616;
+}
+#image_view > div {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+.image-slide, 
+.image-thumb {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.image-slide {
+	overflow: hidden;
+}
+.image-slide-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.image-slide-list {
+	height: inherit;
+	display: -webkit-box;
+	-webkit-box-lines: multiple;
+}
+.image-slide-item {
+	width: 100%;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	font-size: 14px;
+	color: #fff;
+}
+.image-slide-item img {
+	max-width: 100%;
+	height: auto;
+}
+.image-nums {
+	display: inline-block;
+	margin-top: 7px;
+	padding: 0 10px;
+	border: 1px solid #dcdcdc;
+	border-radius: 30px;
+	color: #dcdcdc;
+	line-height: 22px;
+}
+.image-icon {
+	font-size: 12px;
+	text-align: center;
+	white-space: nowrap;
+}
+.image-icon::before {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin-right: 3px;
+	margin-bottom: -2px;
+	background-image: url('../img/image-icon-bg-60-25.png?__inline');
+	background-repeat: no-repeat;
+	background-position: 1px 2px;
+	background-size: 30px 13px;
+}
+.image-thumb .image-nums {
+	border: 1px solid #2786fb;
+	color: #2786fb;
+	text-align: center;
+}
+.image-thumb .image-icon::before {
+	background-position: -17px 2px;
+}
+.image-thumb {
+	overflow: auto;
+}
+.image-thumb-list {
+	position: relative;
+	width: 320px;
+	margin: 0 auto;
+	margin-top: 7px;
+	background-color: #161616;
+	overflow: hidden;
+}
+.image-thumb-item {
+	background-color: #f4f7f9;
+	background-image: url('/gmu/GMU-ui/img/bg-news-placeholder.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 92px 64px;
+	position: absolute;
+	display: block;
+	overflow: hidden;
+}
+.image-thumb-item img {
+	width: 100%;
+}

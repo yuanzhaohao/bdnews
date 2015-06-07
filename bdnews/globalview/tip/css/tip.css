@@ -1,0 +1,19 @@
+#tip_globalview {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 50px;
+	z-index: 11;
+	display: none;
+	text-align: center;
+}
+.tip-box {
+	display: inline-block;
+	margin: 0 auto;
+	padding: 2px 12px;
+	background-color: rgba(0, 0, 0, .85);
+	border-radius: 3px;
+	color: #fff;
+	font: normal 14px/26px normal;
+	-webkit-transform: scale(0, 0);
+}

@@ -1,0 +1,10 @@
+<script type="text/template" id="template_share_list">
+<% _.each(list, function (item, index) { %>
+	<li class="share-item"
+		data-url="<%- item.url %>"
+		>
+		<div class="share-item-icon share-item-<%- index %>"></div>
+		<h5 class="share-item-title"><%- item.title %></h5>
+	</li>
+<% }); %>
+</script>

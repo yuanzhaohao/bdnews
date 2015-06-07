@@ -1,0 +1,16 @@
+/* setting */
+#setting_view{
+	display: none;
+}
+#setting_view_header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9;
+}
+#setting_view_content {
+	position: relative;
+	min-height: 420px;
+	padding-top: 52px;
+}

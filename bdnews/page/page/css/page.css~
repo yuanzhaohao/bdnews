@@ -1,0 +1,301 @@
+/* page */
+#page_view{
+	display: none;
+	position: relative;
+}
+#page_view_header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9;
+}
+#page_view_content {
+	min-height: 420px;
+	padding-top: 52px;
+}
+#page_view_content .ui-header-config {
+	position: fixed;
+}
+
+.page-view-article {
+	margin-bottom: 20px;
+}
+.page-article-header {
+	border-left: 4px #2786fb solid;
+	margin-bottom: 20px;
+	padding-right: 10px;
+}
+.page-article-title {
+	line-height: 26px;
+	padding-left: 7px;
+	position: relative;
+	top: -2px;
+	text-align: left;
+	font-weight: bold;
+	color: #000;
+	font-size: 20px;
+}
+.page-article-info {
+	padding-left: 7px;
+	line-height: 14px;
+	text-align: left;
+	color: #8b8b8b;
+	font-size: 12px;
+}
+.page-article-time {
+	margin-left: 12px;
+}
+.page-article-content {
+	padding: 0 7px;
+}
+.page-article-text {
+	margin-bottom: 8px;
+	font-size: 18px;
+	line-height: 28px;
+	text-indent: 2em;
+	color: #202020;
+}
+.page-article-img,
+.page-article-video {
+	position: relative;
+	min-height: 50px;
+	max-height: 200px;
+	margin-bottom: 8px;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+}
+.page-article-img img,
+.page-article-video img {
+	width: 100%;
+	vertical-align: middle;
+	min-width: 92px;
+	min-height: 64px;
+	background-color: #f4f7f9;
+	background-image: url('/gmu/GMU-ui/img/bg-news-placeholder.png');
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.page-article-img span {
+	position: absolute;
+	display: block;
+	bottom: 10px;
+	right: 10px;
+	height: 20px;
+	border-radius: 20px;
+	background-color: #292929;
+	font-size: 12px;
+	line-height: 20px;
+	color: #d5d5d5;
+	padding: 0 9px 0 25px;
+}
+.page-article-tip {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url('/static/bdnews/bdnews/page/page/img/bg-article-video.png');
+	background-repeat: no-repeat;
+	background-size: 50px 50px;
+	background-position: center;
+}
+.lazy-load {
+	width: 82px;
+	height: 62px;
+	background-image: url('/gmu/GMU-ui/img/bg-news-placeholder.png');
+	background-size: 80px 60px;
+	background-position: center;
+}
+.img-eye {
+	background-image: url('/static/bdnews/bdnews/page/page/img/bg-eye.png');
+	background-size: 13px 8px;
+	background-repeat: no-repeat;
+	background-position: 8px 6px;
+}
+/* 查看原文 */
+.page-view-state {
+	height: 20px;
+	border-top: 1px solid #ececec;
+	text-align: center;
+}
+.page-view-state div {
+	width: 90px;
+	margin: -9px auto 0 auto;
+	background-color: #fafafa;
+	color: #8b8b8b;
+	font-size: 14px;
+}
+.page-view-state a {
+	color: #8b8b8b;
+	text-decoration: none
+}
+
+.page-no-content {
+	padding: 0 22px 22px
+}
+.page-no-content-face {
+	height: 155px;
+	background-image: url('/static/bdnews/bdnews/page/page/img/bg-no-content-face.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 95px 95px;
+}
+.page-no-content h1 {
+	line-height: 18px;
+	font-size: 18px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #b7babb
+}
+.page-no-content span {
+	color: #8e8e8e;
+	font-size: 14px;
+	line-height: 20px
+}
+.page-no-content-reason {
+	display: table;
+	margin: 0 auto;
+	padding: 7px 0 27px
+}
+.page-no-content-label,
+.page-no-content-text { 
+	display: table-cell
+}
+.page-no-content-func {
+	margin: 0 auto;
+	text-align: center
+}
+.page-no-content-func div {
+	display: inline-block;
+	border:1px solid #ced2d4;
+	background-color: #e9eced;
+	color: #303030;
+	font-size: 16px;
+	line-height: 35px;
+	height: 35px;
+	width: 124px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.page-title {
+	height: 34px;
+	padding-left: 9px;
+	border-left: 3px solid #2786fb;
+	background-color: #f0f2f5;
+	color: #323232;
+	line-height: 34px;
+	font-size: 16px;
+}
+.page-title span {
+	display: block;
+	height: 32px;
+	padding-left: 8px;
+	border-top: 1px solid #e6e6e6;
+	border-bottom: 1px solid #e6e6e6;
+	background-color: #f5f5f5;
+	line-height: 32px;
+	font-size: 16px;
+	color: #000;
+}
+.page-hot-box {
+	margin-bottom: 10px;
+}
+.page-hot-item {
+	height: 60px;
+	padding: 7px 10px;
+	border-top: 1px solid #e7e7e7;
+	overflow: hidden;
+}
+.page-hot-item:first-child {
+	border: none;
+}
+.page-hot-image {
+	float: left;
+	width: 80px;
+	height: 60px;
+	margin-right: 7px;
+	border: 1px solid #e8e8e8;
+	background-color: #fafafa;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	-webkit-box-sizing: border-box;
+	overflow: hidden;
+	font-size: 0;
+}
+.page-hot-image img {
+	width: 80px;
+	vertical-align: middle;
+}
+.page-hot-text {
+	position: relative;
+	overflow: hidden;
+}
+.page-hot-title {
+	font-size: 16px;
+    line-height: 26px;
+}
+.page-hot-abs, 
+.page-hot-time {
+	font-size: 12px;
+	line-height: 16px;
+	color: #777;
+}
+.page-hot-time {
+	position: absolute;
+	right: 3px;
+	bottom: 0;
+}
+
+.page-related-box {
+	margin-bottom: 10px;
+}
+.page-related-item {
+	max-height: 44px;
+	padding: 7px 10px;
+	border-top: 1px solid #e7e7e7;
+	overflow: hidden;
+}
+.page-related-item:first-child {
+	border: none;
+}
+.page-related-title {
+	padding-right: 10px;
+	line-height: 22px;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAeCAYAAADD0FVVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAALZJREFUSMdj+P//PwO1McPQN/TKlSv8VDUUaOB8IP4JxH5UMRRoUC8Q/4disgzGZmg7kqFkGYzL+9MoMRhfRJFtMF5Jcg0maCs5BhMVRqQaTHSMkmIwSekPh8GBFOd9Ygwmx1BFIP6GZvAKSrwPMvAJmoEn0QsfqhtISpIi2kBiEz9JBhKTTUk2kFCBokKOgfiKPrINxFVIU2QgLkO3U2IgLkNtgPgzuQbiC1MbaB7nH6EtFEowAOwNem2qE2M6AAAAAElFTkSuQmCC');
+	background-position: right center;
+	background-repeat: no-repeat;
+	background-size: 10px 15px;
+	font-size: 16px;
+}
+
+.page-tag-list {
+	margin: 10px 0;
+}
+.page-tag-item {
+	float: left;
+	height: 30px;
+	margin-left: 7px;
+	padding: 0 12px;
+	background-color: #66b2ef;
+	text-align: center;
+	white-space: nowrap;
+	font-size: 14px;
+	line-height: 30px;
+	color: #fff;
+	border-radius: 2px;
+}
+.page-tag-item:nth-child(2n) {
+	background-color: #f690a8;
+}
+.page-tag-item:nth-child(3n) {
+	background-color: #ecba45;
+}
+.page-tag-item:nth-child(4n) {
+	background-color: #79c5ce;
+}

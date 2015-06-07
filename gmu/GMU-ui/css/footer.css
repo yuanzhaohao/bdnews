@@ -1,0 +1,30 @@
+/* footer */
+.ui-footer {
+    position: relative;
+    padding: 15px 0;
+    background-color: #0f6fe4;
+    color: #fff;
+    text-align: center;
+}
+
+.ui-footer nav {
+    display: -webkit-box;
+    margin-bottom: 10px;
+}
+.ui-footer-item {
+    height: 18px;
+    line-height: 18px;
+    font-size: 15px;
+    border-left: 1px solid #0057c1;
+    -webkit-box-flex: 1;
+}
+.ui-footer-item:first-child {
+    border: none;
+}
+.ui-footer-copyright {
+    height: 12px;
+    line-height: 12px;
+    padding: 0 12px;
+    color: rgba(255,255,255,.77);
+    font-size: 12px;
+}

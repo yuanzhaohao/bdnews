@@ -1,0 +1,51 @@
+<script type="text/template" id="template_imgsearch_list">
+<%
+var s = 3,
+	W = 320 - 3 * s,
+	w1, h1, w2, h2,
+	h, x1, x2;
+
+for (var i = 0, len = list.length; i < len; i++) {
+%>
+	<%
+	if (i % 2 === 1) {
+		w1 = list[i - 1].width;
+		h1 = list[i - 1].height;
+		w2 = list[i].width;
+		h2 = list[i].height;
+		x1 = Math.floor(W / (1 + (h1 * w2) / (h2 * w1)));
+		x2 = W - x1;
+		h = Math.floor((h1 * x1) / w1);
+	%>
+		<div class="imgsearch-item" 
+			data-index="<%- list[i - 1].index%>" 
+			style="width: <%- x1 %>px; height: <%- h %>px"
+		>
+			<img class="img-lazyload" data-url="<%- list[i - 1].thumburl %>" />
+		</div>
+		<div class="imgsearch-item" 
+			data-index="<%- list[i].index%>" 
+			style="width: <%- x2 %>px; height: <%- h %>px"
+		>
+			<img class="img-lazyload" data-url="<%- list[i].thumburl %>" />
+		</div>
+	<%
+	} 
+	%>
+<% } %>
+</script>
+
+<script type="text/template" id="template_imgsearch_query">
+<h2 class="page-title">相关搜索</h2>
+<ul class="clearfix">
+	<%
+	var i = list.length;
+	while (i--) {
+		if (i % 2 === 0) { 
+	%>
+		<li class="imgsearch-query-item" data-word="<%- list[i + 1] %>"><%- list[i] %></li>
+	<%	}
+	}
+	%>
+</ul>
+</script>

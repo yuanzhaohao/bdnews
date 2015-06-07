@@ -1,0 +1,22 @@
+<script type="text/template" id="template_subscribe_subpage">
+<div class="subscribe-list clearfix">
+<% _.each(tags, function (item, index) { %>
+	<% if (!tagKey[item.name]) { %>
+	<div class="subscribe-add-item"
+		data-id="<%- item.id %>"
+		data-type="<%- item.type %>"
+		data-name="<%- encodeURIComponent(item.name) %>"
+	><%- item.name %></div>
+	<% } %>
+<% }); %>
+</div>
+</script>
+
+<script type="text/template" id="template_subscribe_list">
+<% _.each(tags, function (item, index) { %>
+	<div class="subscribe-item"
+		data-type="<%- item.type %>"
+		data-name="<%- encodeURIComponent(item.name) %>"
+	><%- item.name %></div>
+<% }); %>
+</script>

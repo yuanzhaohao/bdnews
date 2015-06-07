@@ -1,0 +1,33 @@
+<script type="text/template" id="template_ui_news">
+<div class="ui-refresh-wrapper">
+	<div class="ui-refresh-btn ui-refresh">点击加载更多</div>
+</div>
+</script>
+
+<script type="text/template" id="template_ui_news_list">
+<% _.each(list, function (item, index) { %>
+<div class="ui-news-item" 
+	data-nid="<%- (type !== 'search') ? item.nid : item.url %>"
+	data-type="<%- type %>"
+	<% if (item.type === 'z') { %>
+		data-zid="<%- item.z_id %>"
+	<% } %>
+	>
+	<div class="ui-news-main">
+		<% if (item.imageurls instanceof Array && item.imageurls.length > 0) { %>
+		<div class="ui-news-image">
+			<img class="img-lazyload" data-url="<%- item.imageurls[0].url %>" />
+		</div>
+		<% } %>
+		<div class="ui-news-text">
+			<h2 class="ui-news-title"><%- item.title %></h2>
+			<p class="ui-news-abs"><%= item.abs || ' ' %></p>
+			<% if (item.type === 'z') { %>
+				<div class="ui-topic-tip"></div>
+			<% } %>
+		</div>
+	</div>
+	<p class="ui-news-info"><%- bdnews.helper.getFormatedDate(item.ts) %></p>
+</div>
+<% }); %>
+</script>

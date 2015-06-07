@@ -1,0 +1,114 @@
+/*index-carousel*/
+.index-carousel {
+	position: relative;
+	width: 100%;
+	background: url('/static/bdnews/bdnews/page/index/img/bg-carousel.png');
+	background-size: 100px 100px;
+	overflow: hidden;
+}
+.index-carousel-inner {
+	display: -webkit-box;
+	-webkit-box-lines: multiple;
+}
+.index-carousel-item {
+	position: relative;
+	width: 100%;
+	padding-top: 62.5%;
+	overflow: hidden;
+}
+.index-carousel-inner img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+}
+.index-carousel-inner span {
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	-webkit-box-sizing: border-box;
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.65);
+	color: #555;
+}
+.index-carousel-title {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 12px;
+	font-size: 14px;
+	color: #fff;
+	background-color: rgba(0,0,0,0.5);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.65);
+}
+.index-carousel-nav {
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+}
+.index-carousel-nav > i {
+	float: left;
+    display: inline;
+	border-radius: 3px;
+	width: 6px;
+	height: 6px;
+	margin-left: 7px;
+	background-color: #7a7a7a;
+}
+.index-carousel-nav > i.cur {
+	background-color: #2786FB;
+}
+/*loading 动画*/
+.index-carousel-spinner {
+	width: 50px;
+	height: 25px;
+	text-align: center;
+	font-size: 10px;
+}
+
+.index-carousel-spinner > div {
+	background-color: #555;
+	height: 100%;
+	width: 5px;
+	display: inline-block;
+
+	-webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+.index-carousel-spinner .rect2 {
+	-webkit-animation-delay: -1.1s;
+}
+
+.index-carousel-spinner .rect3 {
+	-webkit-animation-delay: -1.0s;
+}
+
+.index-carousel-spinner .rect4 {
+	-webkit-animation-delay: -0.9s;
+}
+
+.index-carousel-spinner .rect5 {
+	-webkit-animation-delay: -0.8s;
+}
+
+@-webkit-keyframes stretchdelay {
+	0%, 40%, 100% {
+		-webkit-transform: scaleY(0.4)
+	}  
+	20% {
+		-webkit-transform: scaleY(1.0)
+	}
+}
+
+@keyframes stretchdelay {
+	0%, 40%, 100% {
+		-webkit-transform: scaleY(0.4);
+	} 20% {
+		-webkit-transform: scaleY(1.0);
+	}
+}

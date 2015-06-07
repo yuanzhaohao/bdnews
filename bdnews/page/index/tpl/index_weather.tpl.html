@@ -1,0 +1,17 @@
+<script type="text/template" id="template_index_weather">
+<img src="<%- data.image %>">
+<div class="index-weather-city">
+	<span class="index-weather-name"><%- data.city %></span>
+	<span class="index-weather-switch">更改城市</span>
+</div>
+<div class="index-weather-time">
+	<div class="index-weather-date">
+		今天是 <%- bdnews.helper.timeFormat(data.weather[0].date, 'yyyy年MM月dd日') %>
+	</div>
+	<div class="index-weather-live"><%- data.weather[0].time %></div>
+</div>
+<div class="index-weather-weather" style="background-image:url('<%- bdnews.conf.getWeatherIcon(data.weather[0].weather) %>')">
+	<div class="index-weather-temperature"><%- data.weather[0].temperature %></div>
+	<div class="index-weather-info"><%- data.weather[0].weather || '暂无天气信息' %></div>
+</div>
+</script>

@@ -1,0 +1,13 @@
+<script type="text/template" id="template_search_box">
+
+</script>
+
+<script type="text/template" id="template_search_hotwords">
+<h2 class="search-hotwords-title">热搜词</h2>
+<ul class="search-hotwords-list">
+<% _.each(words, function (item, index) { %>
+	<li class="search-hotwords-item" 
+		data-keyword="<%- encodeURIComponent(item) %>"><%- item %></li>
+<% }); %>
+</ul>
+</script>

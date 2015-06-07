@@ -1,0 +1,162 @@
+#sideBar_globalview {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	-webkit-transform: translate(-100%, 0);
+	z-index: 10;
+}
+
+.sideBar-catalog {
+	width: 87.5%;
+	height: 100%;
+	background-color: #2e2e2e;
+	color: #cbcfd6;
+	overflow: hidden;
+}
+.sideBar-overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 87.5%;
+	background: rgba(0,0,0,0.2);
+	box-shadow: -3px 3px 4px rgba(0,0,0,0.68);
+}
+.sideBar-catalog-header {
+	position: relative;
+	height: 44px;
+	line-height: 44px;
+	padding-left: 56px;
+	font-size: 18px;
+	background-color: #1f1f1f;
+	border-bottom: 1px solid #000;
+	-webkit-box-shadow: 0 0 10px #000;
+	z-index: 1;
+}
+.sideBar-catalog-face {
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	background-color: #eee;
+	background-image: url('/static/bdnews/bdnews/globalview/sideBar/img/bg-catalog-face.png');
+	background-repeat: no-repeat;
+	background-size: 32px 30px;
+	background-position: center;
+}
+.sideBar-catalog-face img {
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+}
+
+.sideBar-catalog-column {
+	float: left;
+	width: 39px;
+	height: 482px;
+	text-shadow: 0 1px 0 #000;
+	text-align: center;
+	overflow: hidden;
+}
+.sideBar-catalog-columnitem {
+	display: table;
+	height: 33.33333333333333%;
+	padding-right: 5px;
+	padding-left: 6px;
+	border-right: 1px solid #333;
+	line-height: 28px;
+	font-size: 18px;
+}
+.sideBar-catalog-columnitem span {
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+}
+.sideBar-catalog-column .cur {
+	background-color: #262626;
+	border-right: 1px solid rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0 0 1px rgba(0,0,0,0.4) inset;
+	color: #fafafa;
+	text-shadow: 0px 1px 3px rgba(255,255,255,.8);
+	font-weight: 700;
+}
+.sideBar-catalog-content {
+	border-left: 1px solid #262626;
+	-webkit-transform: translate(0px, 0px);
+	overflow: hidden;
+}
+.sideBar-catalog-item,
+.sideBar-catalog-video {
+	position: relative;
+	padding-left: 15px;
+	font-size: 16px;
+	text-align: left;
+	line-height: 36px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #262626;
+	text-shadow: 0 1px 0 #000;
+}
+.sideBar-catalog-arrow {
+	position: absolute;
+	right: 12px;
+	top: 0;
+	width: 16px;
+	height: 36px;
+	background-image: url('/static/bdnews/bdnews/globalview/sideBar/img/right-arrow.png');
+	background-repeat: no-repeat;
+	background-size: 11px 16px;
+	background-position: center;
+}
+
+.sideBar-catalog-item-pressed {
+	border-top: 1px solid rgba(0,0,0,0.4);
+	border-bottom: 1px solid #232323;
+	color: #969696;
+	-webkit-box-shadow: 0 0 1px rgba(0,0,0,0.4) inset;
+	background-color: #262626;
+}
+.sideBar-catalog-title {
+	height: 30px;
+	color: #747474;
+	font-size: 15px;
+	padding-left: 15px;
+	text-align: left;
+	border-top: 1px solid #3d3d3d;
+	border-bottom: 1px solid #1c1c1c;
+	line-height: 30px;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.6);
+	background: -webkit-gradient(linear,0 0,0 100%,from(#303030),color-stop(0.1,#303030),to(#272727));
+}
+.sideBar-catalog-footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+	background-color: #303030;
+	-webkit-box-shadow: 0 1px 10px #000,inset 0 1px #3d3d3d;
+	box-shadow: 0 1px 10px #000,inset 0 1px #3d3d3d;
+}
+.sideBar-catalog-search {
+	position: absolute;
+	top: 4px;
+	left: 7px;
+	width: 220px;
+	padding: 7px;
+	padding-left: 37px;
+	border: 1px solid #2c2c2c;
+	border-radius: 15px;
+	background-color: #494949;
+	background-image: url('/static/bdnews/bdnews/globalview/sideBar/img/bg-catalog-search.png');
+	background-size: 23px 23px;
+	background-repeat: no-repeat;
+	background-position: 7px center;
+	line-height: 16px;
+	font-size: 16px;
+	color: #8b8b8b;
+}

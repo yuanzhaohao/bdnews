@@ -1,0 +1,63 @@
+#dialog_globalview {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+}
+.dialog-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .2);
+}
+.dialog-catalog-box {
+	display: none;
+	width: 270px;
+	margin: 0 auto;
+	background-color: #f7f8fa;
+	border: 1px solid #ccc;
+	text-align: center;
+	z-index: 11;
+	-webkit-transform: translate(0, 0);
+}
+.dialog-catalog-title {
+	border-bottom: 1px solid #ccc;
+	background-color: #e7e7e7;
+	line-height: 34px;
+	font-size: 18px;
+}
+.dialog-catalog-text {
+	margin-top: 7px;
+	line-height: 24px;
+	font-size: 14px;
+	color: #555;
+}
+.dialog-catalog-btnbox {
+	position: relative;
+	height: 24px;
+	width: 160px;
+	margin: 0 auto;
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
+.dialog-catalog-btn {
+	display: inline-block;
+	position: absolute;
+	padding: 0 10px;
+	background-color: #0074ff;
+	line-height: 24px;
+	font-size: 14px;
+	color: #fafafa;
+}
+.dialog-catalog-confirm {
+	left: 0;
+}
+.dialog-catalog-cancel {
+	right: 0;
+}

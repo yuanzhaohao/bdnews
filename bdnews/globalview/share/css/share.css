@@ -1,0 +1,90 @@
+#share_globalview {
+	display: none;
+}
+.share-overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.2);
+	z-index: 10;
+}
+.share-catalog {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #f7f8fa;
+	-webkit-transform: translate3d(0px, 280px, 0px);
+	z-index: 11;
+}
+.share-title {
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	font-size: 19px;
+	font-weight: 700;
+	color: #333;
+}
+.share-list {
+	padding-top: 7px;
+	padding-left: 7px;
+}
+.share-item {
+	float: left;
+	width: 67px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.share-item-icon {
+	display: inline-block;
+	width: 30px;
+	height: 31px;
+	margin-bottom: 3px;
+	background-image: url('/static/bdnews/bdnews/img/bg-share.png');
+	background-repeat: no-repeat;
+	background-size: 30px;
+}
+.share-item-qzone {
+	background-position: 0px 0px;
+}
+.share-item-sina {
+	background-position: 0px -52px;
+}
+.share-item-renren {
+	background-position: 0px -375px;
+}
+.share-item-qweibo {
+	background-position: 0px -267px;
+}
+.share-item-weixin {
+	background-position: 0px -157px;
+}
+.share-item-qq {
+	background-position: 0px -211px;
+}
+.share-item-pengyou {
+	background-position: 0px -322px;
+}
+.share-item-douban {
+	background-position: 0px -425px;
+}
+.share-item-baidu {
+	background-position: 0px -103px;
+}
+.share-item-title {
+	line-height: 16px;
+	color: #777;
+	font-size: 13px;
+}
+.share-cancel {
+	height: 34px;
+	border-top: 1px solid #ccc;
+	background-color: #e7e7e7;
+	text-align: center;
+	line-height: 34px;
+	color: #0f6fe4;
+	font-size: 18px;
+}

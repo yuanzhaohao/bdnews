@@ -1,0 +1,19 @@
+/* global */
+@import url('./common.css?__inline')
+@import url('./global-aio.css?__inline')
+@import url('./ui.css?__inline')
+
+/* page */
+@import url('../page/index/css/index.css?__inline')
+@import url('../page/page/css/page.css?__inline')
+@import url('../page/image/css/image.css?__inline')
+@import url('../page/search/css/search.css?__inline')
+@import url('../page/comment/css/comment.css?__inline')
+@import url('../page/setting/css/setting.css?__inline')
+@import url('../page/feedback/css/feedback.css?__inline')
+@import url('../page/topic/css/topic.css?__inline')
+@import url('../page/video/css/video.css?__inline')
+@import url('../page/img/css/img.css?__inline')
+@import url('../page/imgsearch/css/imgsearch.css?__inline')
+@import url('../page/imgimage/css/imgimage.css?__inline')
+@import url('../page/subscribe/css/subscribe.css?__inline')

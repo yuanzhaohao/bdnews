@@ -1,0 +1,25 @@
+<script type="text/template" id="template_ui_footer">
+<% if (page !== 'search' && page !== 'imgsearch') { %>
+<div class="ui-search-box">
+	<div class="ui-search-btn">百度一下</div>
+	<input class="ui-search-input" type="search" autocomplete="off" autocorrect="off" maxlength="64" name="word" placeholder="百度一下 你就知道" value="">
+</div>
+<% } %>
+<nav>
+	<% if (page !== 'index') { %>
+		<div class="ui-footer-item" data-action="index">首页</div>
+	<% } %>
+	<% if (page !== 'subscribe') { %>
+		<div class="ui-footer-item" data-action="subscribe">订阅</div>
+	<% } %>
+	<% if (page !== 'feedback') { %>
+		<div class="ui-footer-item" data-action="feedback">反馈</div>
+	<% } %>
+	<% if (isLogin) { %>
+		<div class="ui-footer-item" data-action="logout">退出</div>
+	<% } else { %>
+		<div class="ui-footer-item" data-action="login">登录</div>
+	<% } %>
+</nav>
+<div class="ui-footer-copyright">©2014 Powered By Yzh</div>
+</script>

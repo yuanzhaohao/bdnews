@@ -1,0 +1,18 @@
+<script type="text/template" id="template_video_carousel">
+<div class="index-carousel-inner">
+<% _.each(list, function (item, index) { %>
+	<div class="index-carousel-item"
+		data-title="<%- item.title %>"
+		></div>
+<% }); %>
+</div>
+<div class="index-carousel-title"></div>
+<div class="index-carousel-nav">
+<%
+var i = list.length;
+while (i--) {
+%>
+	<i></i>
+<% } %>
+</div>
+</script>

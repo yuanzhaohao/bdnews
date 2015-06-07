@@ -1,0 +1,48 @@
+<script type="text/template" id="template_ui_header">
+<header class="ui-header <% if (page === 'image') { %>image-slide-header<% } %>">
+	<div class="ui-header-backbtn"></div>
+	<h2 class="ui-header-title <% if (isLogo) { %>ui-header-logo<% } %>">
+		<% if (page === 'image') { %>
+		<div class="image-nums image-nums-slide">
+			<span class="image-icon image-icon-slide">
+				<%- id + 1 %> / <%- len %>
+			</span>
+		</div>
+		<% } %>
+	</h2>
+    <% if (page === 'subscribe') { %>
+        <div class="ui-config-r">
+            <div class="ui-config-btn">取消</div>
+            <div class="ui-config-btn">保存</div>
+        </div>
+    <% } %>
+</header>
+</script>
+
+<script type="text/template" id="template_ui_header_config">
+<div class="ui-header-config"></div>
+<ul class="ui-config-list">
+	<% _.each(classes, function (item, index) { %>
+		<li class="ui-config-item <%- item %>"></li>
+	<% }); %>
+</ul>
+</script>
+
+<script type="text/template" id="template_config_collect">
+<li class="ui-config-item <%- className %>"></li>
+</script>
+
+<script type="text/template" id="template_header_searchbox">
+<div class="ui-search-box">
+	<div class="ui-search-btn">百度一下</div>
+	<input type="search" placeholder="百度一下 你就知道" autocomplete="off" autocorrect="off" maxlength="64" name="word" class="ui-search-input">
+	<div class="ui-search-close"></div>
+	<div class="ui-search-tips">
+		<ul class="ui-search-list"></ul>
+		<div class="ui-search-setting">
+			<div class="ui-search-setting-close">关闭</div>
+			<div class="ui-search-setting-clear">清除记录</div>
+		</div>
+	</div>
+</div>
+</script>

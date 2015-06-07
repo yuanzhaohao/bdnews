@@ -1,0 +1,18 @@
+<div id="feedback_view">
+	<div class="ui-header-container">
+		<header class="ui-header">
+			<div class="ui-header-backbtn"></div>
+			<h2 class="ui-header-title">意见反馈</h2>
+		</header>
+	</div>
+	<div id="feedback_view_content">
+		<form id="feedback_form" method="POST" action="http://api.baiyue.baidu.com/sn/api/feedback" target="postpage">
+			<input name="mid" type="hidden" value="news_ios_webapp">
+			<textarea class="feedback-textarea" name="msg" autofocus="" placeholder="请留下您的宝贵意见,帮助我们做得更好"></textarea>
+			<input class="feedback-text" name="contact" type="text" placeholder="手机号/Email:方便我们及时给您回复">
+			<input type="submit" class="feedback-submit" value="提交">
+		</form>
+		<iframe name="postpage" style="display:none;"></iframe>
+	</div>
+	<div id="feedback_view_footer"></div>
+</div>

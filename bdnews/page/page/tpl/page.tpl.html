@@ -1,0 +1,79 @@
+<script type="text/template" id="template_page_subpage">
+<% if (content instanceof Array && content.length > 0) { %>
+<div class="page-view-article">
+	<div class="page-article-header">
+		<h2 class="page-article-title"><%= title %></h2>
+		<h3 class="page-article-info">
+			<%= author %>
+			<span class="page-article-time"><%= time %></span>
+		</h3>
+	</div>
+	<div class="page-article-content">
+		<% var i = 0; %>
+		<% _.each(content, function(item, index) { %>
+			<% if (item.type === 'text') { %>
+				<p class="page-article-text"><%= item.data %></p>
+			<% } %>
+			<% if (item.type === 'image') { %>
+				<div class="page-article-img" data-nid="<%= nid %>" data-index="<%= i %>">
+					<img class="page-article-lazyload" 
+						data-url="<%= item.data.small.url || item.data.small %>">
+				</div>
+				<% i++; %>
+			<% } %>
+			<% if (item.type === 'video') { %>
+				<div class="page-article-video" data-url="<%- item.data.url %>">
+					<img src="<%- item.data.image.small.url %>">
+					<div class="page-article-tip"></div>
+				</div>
+			<% } %>
+		<% }); %>
+	</div>
+</div>
+<div class="page-view-state">
+	<div><a data-href="<%= url %>">点此查看原文</a></div>
+</div>
+<% } else { %>
+<div class="page-no-content">
+	<div class="page-no-content-face"></div>
+	<h1>出故障了！没法提供给你新闻内容。</h1>
+	<div class="page-no-content-reason">
+		<span class="page-no-content-label">可能的原因：</span>
+		<span class="page-no-content-text">
+			原来的页面不存在了<br>
+			我们的服务器开小差了
+		</span>
+	</div>
+	<div class="page-no-content-func">去新闻首页</div>
+</div>
+<% } %>
+
+<% if (tag instanceof Array && tag.length > 0) { %>
+	<div class="page-tag-box">
+		<h2 class="page-title">相关话题</h2>
+		<ul class="page-tag-list clearfix">
+		<% _.each(tag, function(item, index) { %>
+			<li class="page-tag-item" data-name="<%- item %>"><%- item %></li>
+		<% }); %>
+		</ul>
+	</div>
+<% } %>
+
+<div class="page-comment-box"></div>
+
+<% if (related instanceof Array && related.length > 0) { %>
+	<div class="page-related-box">
+		<h2 class="page-title">相关新闻</h2>
+		<ul class="page-related-list">
+		<% _.each(related, function(item, index) { %>
+			<li class="page-related-item" 
+				data-type="relatednews"
+				data-nid="<%- item.nid %>"
+				>
+				<h2 class="page-related-title"><%- item.title %></h2>
+			</li>
+		<% }); %>
+		</ul>
+	</div>
+<% } %>
+</script>

@@ -1,0 +1,113 @@
+.ui-search-box {
+    position: relative;
+    margin: 0 5px 15px;
+    background-color: #fff;
+    height: 32px;
+    line-height: 32px;
+}
+.ui-search-input {
+    width: 75.2%;
+    padding: 5px;
+    line-height: 22px;
+    border: 0 none;
+    font-size: 16px;
+    color: #707070;
+    -webkit-box-shadow: 0 0 1px 1px #ececec inset;
+}
+.ui-search-input::-webkit-input-placeholder {
+    color: #ccc;
+}
+.ui-search-btn {
+    float: right;
+    width: 75px;
+    border-left: 1px solid #8d8d8d;
+    color: #000;
+    -webkit-text-shadow: 0 1px 1px #fff;
+    background: -webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#ddd));
+    text-align: center;
+    white-space: nowrap;
+    font-size: 16px;
+    z-index: 2;
+    letter-spacing: -1px;
+}
+.ui-search-close {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 70px;
+    width: 45px;
+    height: 32px;
+    background-image: url('/gmu/GMU-ui/img/bg-search-close.png');
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+}
+.ui-search-tips {
+    display: none;
+    position: relative;
+    top: 1px;
+    left: -1px;
+    width: 100%;
+    border: 1px solid #b4b4b4;
+    border-top: 0;
+    margin: 0 auto;
+    background-color: #fff;
+    z-index: 9;
+    -webkit-border-bottom-right-radius: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.ui-search-list {
+    z-index: 9;
+}
+.ui-search-item {
+    position: relative;
+    padding-left: 5px;
+    padding-right: 50px;
+    border-bottom: 1px solid #d3d3d3;
+    line-height: 34px;
+    color: #555;
+    font-size: 16px;
+    text-align: left;
+    word-break: break-all;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.ui-search-item span {
+    color: #999;
+}
+.ui-search-edit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 52px;
+    background-image: url('/gmu/GMU-ui/img/bg-search-edit.png');
+    background-size: 11px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ui-search-setting {
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 1px solid #ccc;
+    background-color: #f7f7f7;
+    color: #555;
+}
+.ui-search-setting-clear,
+.ui-search-setting-close {
+    text-align: center;
+}
+.ui-search-setting-clear {
+    display: none;
+    width: 96px;
+    border-right: 1px solid #c5c5c5;
+}
+.ui-search-setting-close {
+    float: right;
+    width: 53px;
+    border-left: 1px solid #c5c5c5;
+}

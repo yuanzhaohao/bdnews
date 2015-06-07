@@ -1,0 +1,50 @@
+<script type="text/template" id="template_index_catalog">
+<% if (isLogin) { %>
+	<div class="index-catalog-header" data-act="logout">
+		<div class="index-catalog-face">
+			<img src="http://himg.bdimg.com/sys/portrait/item/5616e599ace9ad82797a685112.jpg">
+		</div>退出登录
+	</div>
+<% } else { %>
+	<div class="index-catalog-header" data-act="login">
+		<div class="index-catalog-face"></div>点击登录
+	</div>
+<% } %>
+<div class="index-catalog-content">
+	<div class="index-catalog-column">
+		<div class="index-catalog-columnitem cur"><span>新闻</span></div>
+		<div class="index-catalog-columnitem"><span>视频</span></div>
+		<div class="index-catalog-columnitem"><span>图片</span></div>
+		<div class="index-catalog-columnitem"><span>音乐</span></div>
+	</div>
+	<div class="index-catalog-list">
+		<div class="index-catalog-item" data-act="collect" data-title="我的收藏">我的收藏</div>
+		<div class="index-catalog-item" data-act="push" data-title="精品推送">精品推送</div>
+		<div class="index-catalog-item" data-act="feedback" data-title="意见反馈">意见反馈</div>
+		<div class="index-catalog-title">栏目</div>
+		<% _.each(tags, function (item, index) { %>
+			<% if (item.type !== 'local') { %>
+				<div class="index-catalog-item" 
+					data-type="<%- item.type %>" 
+					data-name="<%- item.name %>"
+					data-id="<%- item.id %>"
+					data-index="<%- index %>"
+				><%- item.name %></div>
+			<% 
+			} 
+			else {
+			%>
+				<div class="index-catalog-item" 
+					data-type="<%- item.type %>" 
+					data-name="北京"
+					data-id="0"
+					data-index="<%- index %>"
+				><%- item.name %></div>
+			<% } %>
+		<% }); %>
+	</div>
+</div>
+<div class="index-catalog-footer">
+	<div class="index-catalog-search">随便搜搜</div>
+</div>
+</script>

@@ -1,0 +1,49 @@
+<script type="text/template" id="template_sideBar">
+<% if (isLogin) { %>
+	<div class="sideBar-catalog-header" data-act="logout">
+		<div class="sideBar-catalog-face">
+			<img src="http://himg.bdimg.com/sys/portrait/item/5616e599ace9ad82797a685112.jpg">
+		</div>退出登录
+	</div>
+<% } else { %>
+	<div class="sideBar-catalog-header" data-act="login">
+		<div class="sideBar-catalog-face"></div>点击登录
+	</div>
+<% } %>
+</script>
+
+<script type="text/template" id="template_sideBar_news">
+<div class="sideBar-catalog-item" 
+	data-page="index" 
+	data-act="collect" 
+	data-title="新闻收藏"
+>新闻收藏<i class="sideBar-catalog-arrow"></i></div>
+<div class="sideBar-catalog-item" 
+	data-page="index" 
+	data-act="push" 
+	data-title="精品推送"
+>精品推送<i class="sideBar-catalog-arrow"></i></div>
+<div class="sideBar-catalog-title">栏目</div>
+<% _.each(tags, function (item, index) { %>
+	<% if (item.type !== 'local') { %>
+		<div class="sideBar-catalog-item" 
+			data-page="index" 
+			data-type="<%- item.type %>" 
+			data-name="<%- item.name %>"
+			data-id="<%- item.id %>"
+			data-index="<%- index %>"
+		><%- item.name %><i class="sideBar-catalog-arrow"></i></div>
+	<% 
+	} 
+	else {
+	%>
+		<div class="sideBar-catalog-item" 
+			data-page="index" 
+			data-type="<%- item.type %>" 
+			data-name="北京"
+			data-id="0"
+			data-index="<%- index %>"
+		><%- item.name %><i class="sideBar-catalog-arrow"></i></div>
+	<% } %>
+<% }); %>
+</script>

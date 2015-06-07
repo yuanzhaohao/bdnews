@@ -1,0 +1,13 @@
+<script type="text/template" id="template_img_content">
+<div class="clearfix">
+<% _.each(list, function (item, index) { %>
+	<div class="img-item" 
+		data-word="<%= encodeURIComponent(item.name) %>"
+		style="width:<%= item.width %>px; height:<%= item.height %>px;"
+	>
+		<img class="img-lazyload" data-url="<%= item.imgUrl %>" />
+		<h2><%= item.name %></h2>
+	</div>
+<% }); %>
+</div>
+</script>
