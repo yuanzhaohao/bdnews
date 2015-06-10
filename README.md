@@ -1,7 +1,7 @@
 ## 毕业设计简介
 获取资讯的webapp应用，使用[fis](http://fis.baidu.com)开发。
 
-### build过程
+### 构建过程
   `npm install -g fis`、
   `fis server install rewrite`、
   `fis release`、
