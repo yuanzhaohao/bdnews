@@ -1,63 +1,61 @@
 <script type="text/template" id="template_index_nav">
-<div class="nav-container">
-	<div class="nav-btn"></div>
-	<div class="nav-inner">
-		<div class="nav-list">
-			<% _.each(tags, function (item, index) { %>
-				<% if (item.type !== 'local') { %>
-					<div class="nav-item" 
-						data-type="<%- item.type %>" 
-						data-name="<%- item.name %>"
-						data-id="<%- item.id %>"
-						data-index="<%- index %>"
-					><%- item.name %></div>
-				<% 
-				} 
-				else {
-				%>
-					<div class="nav-item" 
-						data-type="<%- item.type %>" 
-						data-name="北京"
-						data-id="0"
-						data-index="<%= index %>"
-					><%- item.name %></div>
-				<% } %>
-			<% }); %>
-			<div class="nav-current"></div>
-		</div>
-		<div class="nav-left-shadow"></div>
-		<div class="nav-right-shadow"></div>
+<div class="nav-btn"></div>
+<div class="nav-inner">
+	<div class="nav-list">
+		<% _.each(tags, function (item, index) { %>
+			<% if (item.type !== 'local') { %>
+				<div class="nav-item"
+					data-type="<%- item.type %>"
+					data-name="<%- item.name %>"
+					data-id="<%- item.id %>"
+					data-index="<%- index %>"
+				><%- item.name %></div>
+			<%
+			}
+			else {
+			%>
+				<div class="nav-item"
+					data-type="<%- item.type %>"
+					data-name="北京"
+					data-id="0"
+					data-index="<%= index %>"
+				><%- item.name %></div>
+			<% } %>
+		<% }); %>
+		<div class="nav-current"></div>
 	</div>
-	<div class="nav-subscribe">
-		<div class="nav-subscribe-config">
-			<div class="nav-subscribe-group">
-				<div class="nav-subscribe-manage">管理栏目</div>
-			</div>
+	<div class="nav-left-shadow"></div>
+	<div class="nav-right-shadow"></div>
+</div>
+<div class="nav-subscribe">
+	<div class="nav-subscribe-config">
+		<div class="nav-subscribe-group">
+			<div class="nav-subscribe-manage">管理栏目</div>
 		</div>
-		<div class="nav-subscribe-list clearfix">
-			<% _.each(tags, function (item, index) { %>
-				<% if (item.type !== 'local') { %>
-					<div class="nav-subscribe-item" 
-						data-type="<%- item.type %>" 
-						data-name="<%- item.name %>"
-						data-id="<%- item.id %>"
-						data-index="<%- index %>"
-					><%- item.name %></div>
-				<% 
-				} 
-				else {
-				%>
-					<div class="nav-subscribe-item" 
-						data-type="<%- item.type %>" 
-						data-name="北京"
-						data-id="0"
-						data-index="<%= index %>"
-					><%- item.name %></div>
-				<% } %>
-			<% }); %>
-		</div>
-		<div class="nav-overlay"></div>
 	</div>
+	<div class="nav-subscribe-list clearfix">
+		<% _.each(tags, function (item, index) { %>
+			<% if (item.type !== 'local') { %>
+				<div class="nav-subscribe-item"
+					data-type="<%- item.type %>"
+					data-name="<%- item.name %>"
+					data-id="<%- item.id %>"
+					data-index="<%- index %>"
+				><%- item.name %></div>
+			<%
+			}
+			else {
+			%>
+				<div class="nav-subscribe-item"
+					data-type="<%- item.type %>"
+					data-name="北京"
+					data-id="0"
+					data-index="<%= index %>"
+				><%- item.name %></div>
+			<% } %>
+		<% }); %>
+	</div>
+	<div class="nav-overlay"></div>
 </div>
 </script>
 

@@ -1,7 +1,5 @@
+__inline('./GMU-ui/extend/yscroll.js')
 __inline('./GMU-ui/extend/zepto.scrollLazyload.js')
 __inline('./GMU-ui/extend/zepto.topicSlider.js')
 __inline('./GMU-ui/extend/zepto.jumpHelper.js')
-__inline('./GMU-ui/extend/zepto.imageSlide.js')
 __inline('./GMU-ui/extend/zepto.imageThumb.js')
-__inline('./GMU-ui/extend/zepto.imageSwipe.js')
-__inline('./GMU-ui/extend/zepto.touchScroll.js')
