@@ -1,4 +1,5 @@
 __inline('./GMU-ui/extend/yscroll.js')
+__inline('./GMU-ui/extend/lazyload.js')
 __inline('./GMU-ui/extend/zepto.scrollLazyload.js')
 __inline('./GMU-ui/extend/zepto.topicSlider.js')
 __inline('./GMU-ui/extend/zepto.jumpHelper.js')
