@@ -10,13 +10,14 @@
 	position: absolute;
   left: 5px;
   right: 36px;
+	height: 43px;
 	overflow: hidden;
 	white-space: nowrap;
 }
 .nav-list {
-	position: relative;
-	display: -webkit-box;
-	-webkit-box-lines: multiple;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 .nav-btn,
 .nav-left-shadow,
@@ -63,6 +64,7 @@
 	-webkit-transform: translateX(5px);
 }
 .nav-item {
+	display: inline-block;
 	height: 42px;
 	margin: 0 3px;
 	padding: 0 5px;

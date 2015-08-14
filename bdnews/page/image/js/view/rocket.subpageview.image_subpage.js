@@ -37,7 +37,7 @@ rocket.subpageview.image_subpage = rocket.subpageview.extend({
 			to = params.to,
 			param = params.params,
 			featureString = me.getFeatureString(param);
-		
+
 		if (to == me.ec) {
 			if (me.featureString == featureString) {
 				if (me.isFirstLoad) {
@@ -96,7 +96,7 @@ rocket.subpageview.image_subpage = rocket.subpageview.extend({
 		if (!me.isThumb) {
 			return;
 		}
-		
+
 		me.$('.image-slide').hide();
 		me.$('.image-thumb').show();
 		if (me.isFirstThumb) {
@@ -121,7 +121,7 @@ rocket.subpageview.image_subpage = rocket.subpageview.extend({
 		var me = this,
 			speed = 0;
 
-		me.slideObj.slide(i, speed);
+		me.slideObj.moveToPoint(i, speed);
 		setTimeout(function () {
 			me.goSlide();
 		}, speed + 50);

@@ -22,6 +22,7 @@ rocket.subview.index_header_nav = rocket.subview.extend({
 		me.model = rocket.tags.newsTag;
 		me.isLogin = window.bdnews.login.isLogin();
 		me.isFirstRender = true;
+		me.activeCls = 'nav-item-focus';
 		if (!me.isLogin) {
 			me.tags = me.model;
 			me.render();
@@ -42,7 +43,7 @@ rocket.subview.index_header_nav = rocket.subview.extend({
 			var tags = (me.isFetchData)
 				? me.model.toJSON().data.tag
 				: me.tags;
-			
+
 			me.isFirstRender = false;
 			me.tags = tags;
 
@@ -88,97 +89,7 @@ rocket.subview.index_header_nav = rocket.subview.extend({
 	},
 
 	touchNav: function () {
-		var me = this,
-			$list = me.$('.nav-list'),
-			$last = me.$('.nav-item').last(),
-			$curTip = me.$('.nav-current'),
-			$curItem = me.$('.nav-item').eq(0),
-			maxTipEl = me.$('.nav-left-shadow')[0],
-			minTipEl = me.$('.nav-right-shadow')[0],
-			boxWidth = $list.width(),
-			boxLeft = me.$('.nav-list').offset().left,
-			maxDist = 0,
-			minDist = boxWidth 
-				- ($last.offset().left + $last.width()) 
-				+ boxLeft;
-
-		var nav = $list.touchScroll({
-			isCrosswise: true,
-			minDist: minDist,
-			maxDist: maxDist,
-			onInit: function () {
-				setTimeout(function () {
-					slide();
-				}, 200);
-
-				rocket.navSlide.newsSlide = slide;
-				me.slide = slide;
-			},
-			onCheck: function () {
-				window.bdnews.helper.throttle(check, me, 300, arguments);
-			}
-		});
-
-		function slide ($item) {
-			var dist, w, d, l;
-
-			if (!$item) {
-				var $items = me.$('.nav-item');
-
-				var tagName = me.tagName,
-					tagType = me.tagType;
-
-				$item = $items.eq(0);
-				$items.each(function (index, el) {
-					if (tagName === encodeURIComponent($(this).data('name'))
-						&& tagType === $(this).data('type')) {
-						$item = $(this);
-					}
-				});
-			}
-
-			w = $item.width();
-			dist = d = nav.getDist();
-			l = $item.offset().left - boxLeft;
-
-			dist = d + boxWidth / 2 - w / 2 - l;
-
-			if (Math.abs(d + l) < boxWidth) {
-				dist = d;
-			}
-
-			if (dist >= maxDist) {
-				dist = maxDist;
-			}
-			else if (dist <= minDist) {
-				dist = minDist;
-			}
-
-			setTimeout(function () {
-				$list[0].style.webkitTransitionDuration = '0ms';
-				$list[0].style.webkitTransform = 'translateX(' + dist + 'px)';
-
-				$curTip
-					.show()
-					.width(w)
-					.css({
-						'-webkit-transform': 'translateX(' 
-							+ ($item.offset().left - boxLeft - dist) 
-							+ 'px)',
-						'-webkit-transition-duration': '200ms'
-					});
-			}, 0);
-			$curItem.removeClass('nav-item-focus');
-			$item.addClass('nav-item-focus');
-			$curItem = $item;
-			check(dist >= maxDist, dist <= minDist);
-			nav.setDist(dist);
-		}
-
-		function check () {
-			maxTipEl.style.display = (arguments[0]) ? 'none' : 'block';
-			minTipEl.style.display = (arguments[1]) ? 'none' : 'block';
-		}
+		new YScroll($('.nav-inner')[0]);
 	},
 
 	showSubscribe: function () {
@@ -264,10 +175,11 @@ rocket.subview.index_header_nav = rocket.subview.extend({
 	onItemClick: function (e) {
 		var me = this,
 			$el = $(e.currentTarget),
+			cls = me.activeCls,
 			route;
 
 		window.scrollTo(0, 0);
-		if (!$el.hasClass('nav-item-focus')) {
+		if (!$el.hasClass(cls)) {
 			route = [
 				'#index',
 				encodeURIComponent($el.data('type')),
@@ -275,7 +187,9 @@ rocket.subview.index_header_nav = rocket.subview.extend({
 				encodeURIComponent($el.data('id'))
 			].join('/');
 			me.navigate(route);
-			me.slide($el);
+			$el.addClass(cls);
+			me.$cur && me.$cur.removeClass(cls);
+			me.$cur = $el;
 		}
 	},
 
@@ -290,11 +204,12 @@ rocket.subview.index_header_nav = rocket.subview.extend({
 		var me = this,
 			$el = $(e.currentTarget),
 			$item = me.$('.nav-item').eq($el.data('index')),
+			cls = me.activeCls,
 			route;
-			
+
 		me.hideSubscribe();
 		setTimeout(function () {
-			if (!$item.hasClass('nav-item-focus')) {
+			if (!$item.hasClass(cls)) {
 				route = [
 					'#index',
 					encodeURIComponent($el.data('type')),
@@ -302,7 +217,9 @@ rocket.subview.index_header_nav = rocket.subview.extend({
 					encodeURIComponent($el.data('id'))
 				].join('/');
 				me.navigate(route);
-				me.slide($item);
+				$item.addClass(cls);
+				me.$cur && me.$cur.removeClass(cls);
+				me.$cur = $item;
 			}
 		}, 300);
 	},

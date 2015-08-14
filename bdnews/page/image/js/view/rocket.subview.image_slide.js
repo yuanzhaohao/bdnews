@@ -52,33 +52,31 @@ rocket.subview.image_slide = rocket.subview.extend({
 
 	render: function () {
 		var me = this,
-			s;
+			$items = me.$('.image-slide-item'),
+			scroll;
 
-		setTimeout(function () {
-			s = me.$('.image-slide-list').imageSwipe({
-				startIndex: me.pid,
-				itemclassName: 'image-slide-item',
-				itemSelector: '.image-slide-item',
-				data: me.data,
-				autoTime: 0,
-				onAfterChange: function (cur) {
-					me.pid = cur;
-					me.$('.image-icon-slide').html((cur + 1) + ' / ' + me.data.length);
-					Backbone.history.navigate([
-							'#image',
-							me.type,
-							me.nid,
-							cur
-						].join('/'), {
-							trigger: false,
-							replace: true
-						}
-					);
-				}
-			});
-			me.subec.trigger('getSlideObj', s);
-		}, 150);
 		me.show();
+		scroll = new YScroll(me.$('.image-slide-list')[0], {
+		  distance: window.innerWidth
+		});
+		scroll.scroller.addEventListener('sPointmove', function (e) {
+			var cur = e.curPoint;
+			me.pid = cur;
+			me.$('.image-icon-slide').html((cur + 1) + ' / ' + me.data.length);
+			$items.eq(cur).html('<img src="' + me.data[cur].url+ '">');
+			Backbone.history.navigate([
+					'#image',
+					me.type,
+					me.nid,
+					cur
+				].join('/'), {
+					trigger: false,
+					replace: true
+				}
+			);
+		}, false);
+		scroll.moveToPoint(me.pid, 0);
+		me.subec.trigger('getSlideObj', scroll);
 	},
 
 	onItemClick: function () {
@@ -91,7 +89,7 @@ rocket.subview.image_slide = rocket.subview.extend({
 				top: -h
 			}, 250);
 			me.isHideHeader = true;
-		} 
+		}
 		else {
 			$header.animate({
 				top: 0

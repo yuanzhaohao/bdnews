@@ -6,17 +6,17 @@ rocket.subview.index_subpage_carousel = rocket.subview.extend({
 	events: {
 		'click .index-carousel-item': 'onItemClick'
 	},
-	
+
 	template: _.template($('#template_index_carousel').text()),
 
 	init: function (options) {
 		var me = this;
-		
+
 		me.data = options.data || [];
 		me.isFirstRender = true;
 		me.render();
 	},
-	
+
 	render: function () {
 		var me = this;
 		if (me.isFirstRender) {
@@ -46,29 +46,22 @@ rocket.subview.index_subpage_carousel = rocket.subview.extend({
 				.data('title')
 		);
 		$navs.eq(curIndex).addClass('cur');
-		setTimeout(function () {
-			$inner.imageSwipe({
-				startIndex: curIndex,
-				itemclassName: 'index-carousel-item',
-				itemSelector: '.index-carousel-item',
-				data: new Array(me.data.length),
-				isLoadImg: false,
-				isLoadBeside: false,
-				isHandleWindow: false,
-				onAfterChange: function (cur) {
-					$title.text(
-						$items
-							.eq(cur)
-							.data('title')
-					);
-					$navs
-						.eq(cur)
-						.addClass('cur')
-						.siblings('i')
-						.removeClass('cur');
-				}
-			});
-		}, 150);
+		var scroll = new YScroll($inner[0], {
+		  distance: window.innerWidth
+		});
+		scroll.scroller.addEventListener('sPointmove', function (e) {
+			var cur = e.curPoint;
+			$title.text(
+				$items
+					.eq(cur)
+					.data('title')
+			);
+			$navs
+				.eq(cur)
+				.addClass('cur')
+				.siblings('i')
+				.removeClass('cur');
+		}, false);
 	},
 
 	onItemClick: function (e) {
