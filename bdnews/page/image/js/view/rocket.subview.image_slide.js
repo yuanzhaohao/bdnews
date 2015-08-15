@@ -76,6 +76,7 @@ rocket.subview.image_slide = rocket.subview.extend({
 			);
 		}, false);
 		scroll.moveToPoint(me.pid, 0);
+		$items.eq(me.pid).html('<img src="' + me.data[me.pid].url+ '">');
 		me.subec.trigger('getSlideObj', scroll);
 	},
 
