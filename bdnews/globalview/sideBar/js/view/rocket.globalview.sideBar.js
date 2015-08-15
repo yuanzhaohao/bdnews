@@ -30,8 +30,8 @@ rocket.globalview.sideBar = rocket.globalview.extend({
 		me.maxWidth = window.innerWidth;
 		me.width = 0.875 * me.maxWidth;
 		me.isShowSideBar = false;
-		me.listHeight = window.innerHeight 
-			- me.$('.sideBar-catalog-header').height() 
+		me.listHeight = window.innerHeight
+			- me.$('.sideBar-catalog-header').height()
 			- me.$('.sideBar-catalog-footer').height();
 
 		me.$el[0].addEventListener('touchmove', function (e) {
@@ -102,7 +102,7 @@ rocket.globalview.sideBar = rocket.globalview.extend({
 		me.catalogEl.style.width = me.maxWidth + 'px';
 		me.catalogEl.style.webkitTransitionDuration = speed + 'ms';
 		me.overlayEl.style.display = 'none';
-		
+
 		setTimeout(function () {
 			me.catalogEl.style.width = me.width + 'px';
 			me.catalogEl.style.webkitTransitionDuration = '0ms';
@@ -177,7 +177,7 @@ rocket.globalview.sideBar = rocket.globalview.extend({
 					else {
 						route = '#' + page + '/' + param;
 					}
-					
+
 					slide = rocket.navSlide.videoSlide;
 					$item = $('#video_view_header')
 						.find('.nav-item')
@@ -235,13 +235,6 @@ rocket.globalview.sideBar = rocket.globalview.extend({
 				})
 			);
 			me.isRenderList = true;
-			minDist = me.listHeight - $list.height();
-			if (minDist < 0) {
-				$list.touchScroll({
-					isCrosswise: false,
-					minDist: minDist
-				});
-			}
 		}
 		me.showSideBar();
 	}

@@ -10,6 +10,7 @@
 }
 
 .sideBar-catalog {
+	position: relative;
 	width: 87.5%;
 	height: 100%;
 	background-color: #2e2e2e;
@@ -87,8 +88,13 @@
 }
 .sideBar-catalog-content {
 	border-left: 1px solid #262626;
-	-webkit-transform: translate(0px, 0px);
-	overflow: hidden;
+	position: absolute;
+	top: 45px;
+	right: 0;
+	bottom: 40px;
+	left: 0;
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
 }
 .sideBar-catalog-item,
 .sideBar-catalog-video {
