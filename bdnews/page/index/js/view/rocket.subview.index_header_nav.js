@@ -61,14 +61,19 @@ rocket.subview.index_header_nav = rocket.subview.extend({
 				me.$subscribe = me.$('.nav-subscribe');
 				me.$overlay = me.$('.nav-overlay');
 				me.$subscribeList = me.$('.nav-subscribe-list');
+				me.$items = me.$('.nav-item');
 				me.isShowSubscribe = false;
-
-				me.$subscribe[0].addEventListener('touchmove', function (e) {
-					e.preventDefault();
-				}, false);
-
-				me.touchNav();
-			}, 100);
+				new YScroll(me.$inner[0]);
+				me.$cur = me.$items[0];
+				$.each(me.$items, function (index, item) {
+					var $el = $(item),
+						type = $el.attr('data-type');
+					if (type == me.tagType) {
+						me.$cur = $el;
+					}
+				});
+				me.$cur.addClass(me.activeCls);
+			}, 50);
 		}
 	},
 
@@ -86,10 +91,6 @@ rocket.subview.index_header_nav = rocket.subview.extend({
 		if (me.isLogin) {
 			me.model.off('change', me.render, me);
 		}
-	},
-
-	touchNav: function () {
-		new YScroll($('.nav-inner')[0]);
 	},
 
 	showSubscribe: function () {
