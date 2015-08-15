@@ -72,7 +72,9 @@
 	font-size: 16px;
 }
 .nav-item-focus {
-	color: #2786fb
+	color: #2786fb;
+	border-bottom: 3px solid #2786fb;
+  height: 39px;
 }
 
 .nav-subscribe {
